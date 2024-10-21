@@ -1,6 +1,7 @@
 // Import Classes Here
 const Product = require("./classes/Product.js");
-const Cart = requier("./classes/Cart.js");
+const Cart = require("./classes/Cart.js");
+const Customer = require("./classes/Customer.js")
 
 // DO NOT EDIT BELOW THIS LINE
 try {
