@@ -1,12 +1,19 @@
+const Customer = require('./Customer.js');
+
 class Auth {
   constructor() {
-    this.customer = [];
+    this.customers = [];
   }
-  regitser(name, email, shippingAddress) {
-    this.customer.push(name, email, shippingAddress);
+  register(name, email, shippingAddress) {
+    this.customers.push(new Customer(name, email, shippingAddress));
   }
   login(email) {
-    return customer[email];
+    for (let customer of this.customers) {
+        if (customer.email == email) {
+            return customer;
+        }
+    }
+    return null; // default
   }
 }
 
