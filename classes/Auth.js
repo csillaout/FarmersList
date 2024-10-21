@@ -8,7 +8,12 @@ class Auth {
     this.customers.push(new Customer(name, email, shippingAddress));
   }
   login(email) {
-    return this.customers[email];
+    for (let customer of this.customers) {
+        if (customer.email == email) {
+            return customer;
+        }
+    }
+    return null; // default
   }
 }
 
