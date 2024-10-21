@@ -1,15 +1,17 @@
-const Product = require("./Product.js");
-
 class Cart {
-  construction() {
-    this.products = [];
-    this.total = 0;
-  }
+    constructor() {
+        this.products = [];
+        this.total = 0;
+    }
 
-  addProduct(Product) {
-    this.products.push(Product);
-    this.total += Product["price"];
-  }
+    addProduct(item) {
+        this.products.push(item);
+        this.total += item.price;
+    }
+
+    removeProduct(index) {
+        let item = this.products.splice(index, 1)[0]; // returns an array
+        this.total -= item.price;
+    }
 }
-
 module.exports = Cart;
