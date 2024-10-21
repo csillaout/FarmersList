@@ -1,12 +1,12 @@
 class Auth {
   constructor() {
-    this.customer = [];
+    this.customers = [];
   }
   register(name, email, shippingAddress) {
-    this.customer.push(new Customer(name, email, shippingAddress));
+    this.customers.push(new Customer(name, email, shippingAddress));
   }
   login(email) {
-    return customer[email];
+    return this.customers[email];
   }
 }
 
