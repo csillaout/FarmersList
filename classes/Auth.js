@@ -1,3 +1,5 @@
+const Customer = require('./Customer.js');
+
 class Auth {
   constructor() {
     this.customers = [];
