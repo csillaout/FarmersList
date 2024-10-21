@@ -3,7 +3,7 @@ class Auth {
     this.customer = [];
   }
   register(name, email, shippingAddress) {
-    this.customer.push(name, email, shippingAddress);
+    this.customer.push(new Customer(name, email, shippingAddress));
   }
   login(email) {
     return customer[email];
