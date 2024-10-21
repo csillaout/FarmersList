@@ -14,3 +14,4 @@ class Cart {
         this.total -= item.price;
     }
 }
+module.exports = Cart;
